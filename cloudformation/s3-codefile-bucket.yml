@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Stack for codefile S3 Bucket
+
+Resources:
+
+  SayWhatCodefileBucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: saywhat-lambdas
+
+  Outputs:
+    SayWhatCodefileBucketArn:
+      Description: ARN of bucket to store codefiles in
+      Value: !GetAtt SayWhatCodefileBucket.Arn
+
+    SayWhatCodefileBucketName:
+      Description: ARN of bucket to store codefiles in
+      Value: !Ref SayWhatCodefileBucket
