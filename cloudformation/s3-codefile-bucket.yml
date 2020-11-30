@@ -8,6 +8,8 @@ Resources:
     Type: AWS::S3::Bucket
     Properties: 
       BucketName: saywhat-lambdas
+      Tags:
+        Project: say-what
 
   Outputs:
     SayWhatCodefileBucketArn:
