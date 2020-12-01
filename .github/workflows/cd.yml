@@ -31,9 +31,11 @@ jobs:
       with:
         name: saywhat-s3-codefile-bucket
         template: ./cloudformation/s3-codefile-bucket.yml
+        no-fail-on-empty-changeset: "1"
 
     - name: Deploy API Custom Domain Name
       uses: aws-actions/aws-cloudformation-github-deploy@v1
       with:
         name: saywhat-api-custom-dns
         template: ./cloudformation/api-custom-dns.yml
+        no-fail-on-empty-changeset: "1"
