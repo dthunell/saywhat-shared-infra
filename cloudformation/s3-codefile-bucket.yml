@@ -11,11 +11,12 @@ Resources:
       Tags:
         Project: say-what
 
-  Outputs:
-    SayWhatCodefileBucketArn:
-      Description: ARN of bucket to store codefiles in
-      Value: !GetAtt SayWhatCodefileBucket.Arn
+Outputs:
 
-    SayWhatCodefileBucketName:
-      Description: ARN of bucket to store codefiles in
-      Value: !Ref SayWhatCodefileBucket
+  SayWhatCodefileBucketArn:
+    Description: ARN of bucket to store codefiles in
+    Value: !GetAtt SayWhatCodefileBucket.Arn
+
+  SayWhatCodefileBucketName:
+    Description: ARN of bucket to store codefiles in
+    Value: !Ref SayWhatCodefileBucket

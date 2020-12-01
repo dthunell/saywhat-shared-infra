@@ -23,7 +23,8 @@ Resources:
 
   # TODO: Setup base API mapping?
 
-  Outputs:
-    SayWhatCustomDomainName:
-      Description: Custom domain name for API
-      Value: !Ref SayWhatCustomDomain
+Outputs:
+
+  SayWhatCustomDomainName:
+    Description: Custom domain name for API
+    Value: !Ref SayWhatCustomDomain
