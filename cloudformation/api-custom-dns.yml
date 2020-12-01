@@ -9,7 +9,8 @@ Resources:
     Properties: 
       DomainName: 'api.say-what-app.com'
       Tags:
-        Project: say-what
+        - Key: Project
+          Value: saywhat
 
   SayWhatCustomDomain:
     Type: AWS::ApiGatewayV2::DomainName
@@ -19,7 +20,8 @@ Resources:
         CertificateArn: !Ref SayWhatAPICertificate
         EndpointType: REGIONAL
       Tags:
-        Project: say-what
+        - Key: Project
+          Value: saywhat
 
   # TODO: Setup base API mapping?
 

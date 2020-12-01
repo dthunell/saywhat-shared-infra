@@ -9,7 +9,8 @@ Resources:
     Properties: 
       BucketName: saywhat-lambdas
       Tags:
-        Project: say-what
+        - Key: Project
+          Value: saywhat
 
 Outputs:
 
