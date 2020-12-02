@@ -7,7 +7,7 @@ Resources:
   SayWhatAPICertificate:
     Type: AWS::CertificateManager::Certificate
     Properties: 
-      DomainName: 'api.say-what-app.com'
+      DomainName: '*.say-what-app.com'
       Tags:
         - Key: Project
           Value: saywhat
