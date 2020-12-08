@@ -2,12 +2,22 @@ AWSTemplateFormatVersion: '2010-09-09'
 
 Description: Stack for custom domain name
 
+Parameters:
+  DomainNameParameter:
+    Type: String
+    Default: 'api.say-what-app.com'
+  HostedZoneIdParameter:
+    Type: String
+
 Resources:
 
   SayWhatAPICertificate:
     Type: AWS::CertificateManager::Certificate
     Properties: 
-      DomainName: '*.say-what-app.com'
+      DomainName: !Ref DomainNameParameter
+      DomainNameValidationOptions:
+        - DomainName: !Ref DomainNameParameter
+          HostedZoneId: !Red HostedZoneIdParameter
       Tags:
         - Key: Project
           Value: saywhat
