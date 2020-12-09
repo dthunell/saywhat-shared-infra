@@ -30,8 +30,7 @@ Resources:
         - CertificateArn: !Ref SayWhatAPICertificate
           EndpointType: REGIONAL
       Tags:
-        - Key: Project
-          Value: saywhat
+        Project: saywhat # All other reasources seem to have this as an array but here it's map for some reason
 
   # TODO: Setup base API mapping?
 
