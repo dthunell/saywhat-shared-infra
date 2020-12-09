@@ -15,7 +15,7 @@ Resources:
     Type: AWS::CertificateManager::Certificate
     Properties: 
       DomainName: !Ref DomainNameParameter
-      DomainValidationOption:
+      DomainValidationOptions:
         - DomainName: !Ref DomainNameParameter
           HostedZoneId: !Ref HostedZoneIdParameter
       Tags:
