@@ -27,8 +27,8 @@ Resources:
     Properties: 
       DomainName: api.say-what-app.com
       DomainNameConfigurations:
-        CertificateArn: !Ref SayWhatAPICertificate
-        EndpointType: REGIONAL
+        - CertificateArn: !Ref SayWhatAPICertificate
+          EndpointType: REGIONAL
       Tags:
         - Key: Project
           Value: saywhat
