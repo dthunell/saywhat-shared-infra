@@ -19,5 +19,5 @@ Outputs:
     Value: !GetAtt SayWhatCodefileBucket.Arn
 
   SayWhatCodefileBucketName:
-    Description: ARN of bucket to store codefiles in
+    Description: Name of bucket to store codefiles in
     Value: !Ref SayWhatCodefileBucket

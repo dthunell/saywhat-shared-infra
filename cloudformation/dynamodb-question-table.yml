@@ -1,0 +1,41 @@
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Resources: 
+
+  SayWhatQuestionTable: 
+    Type: AWS::DynamoDB::Table
+    Properties: 
+      AttributeDefinitions: 
+        - AttributeName: date
+          AttributeType: S
+        - AttributeName: type # question | answer
+          AttributeType: S
+        
+        # Fields used for questions          
+        - AttributeName: question
+          AttributeType: S
+
+        # Fields used for answers
+        - AttributeName: answer
+          AttributeType: S
+        - AttributeName: username
+          AttributeType: S
+        - AttributeName: votes
+          AttributeType: N
+
+      KeySchema: 
+        - AttributeName: date
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+      TableName: SayWhatQuestions
+
+Outputs:
+
+  SayWhatQuestionTableArn:
+    Description: ARN of table of questions and answers
+    Value: !GetAtt SayWhatQuestionTable.Arn
+
+  SayWhatQuestionTableName:
+    Description: Name of table of questions and answers
+    Value: !Ref SayWhatQuestionTable
